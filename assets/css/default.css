@@ -1,0 +1,235 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    overflow-wrap: break-word;
+}
+@font-face {
+    font-family: "thin-font";
+    src: url("../fonts/font2.woff2") format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+:root{
+    --background:#f0f2f5;
+    --color:#000;
+    --misc:#fa0000;
+}
+::selection{
+    background:var(--misc);
+    color:var(--color);
+}
+body{
+    background:var(--background);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "thin-font";
+}
+P{
+    font-family:"thin-font";
+    font-size:105%;
+}
+
+.hdr{
+    margin:1em auto;
+    width:100%;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+.hdr::after{
+    content:" ";
+    padding:2.5px;
+    width:100px;
+    background:var(--misc);
+}
+.hdr>*{
+    height:100%;
+}
+.cover{
+    width:100%;
+    height:300px;
+    overflow:hidden;
+    background:#1c1c27;
+    background-size:cover;
+    border:1px solid #ccc;
+    margin:auto;
+    margin-top:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    color:#fff;
+}
+.hidden{
+    display:none !important;
+}
+.stubborn{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+}
+.center{
+    display:flex;
+    margin:auto;
+}
+.middle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    margin:auto;
+}
+
+.loader{
+    width:100%;
+    height:100%;
+    background:var(--background);
+    display:none;
+    transition:0.4s;
+    opacity:0;
+}
+.loader .item{
+    width:70px;
+    height:70px;
+    display:block;
+    background:var(--misc);
+    border-radius:100%;
+    border:1em solid var(--color);
+    border-top-color:var(--misc);
+    border-bottom-color:var(--misc);
+    animation:rotate 2s linear infinite;
+}
+
+@keyframes rotate{
+    from { transform:rotate(-1deg);  }
+    to   { transform:rotate(360deg); }
+}
+@keyframes levitate{
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 7px); }
+    to   { transform: translate(0, -0px); } 
+}
+@keyframes fade-show{
+    from { opacity:0;}
+    to   { opacity:0; }
+}
+.modal{
+    display:none;
+    flex-direction:column;
+    transition:0.4s;
+    opacity:0;
+    padding:0.5em;
+    width:auto;
+    max-width:700px;
+    background:#fff;
+    height:auto;
+    border-radius:20px;
+}
+.modal-text-content{
+    margin-top:1em;
+    padding:1em;
+    border-top:1px solid #ddd;
+    border-radius:20px;
+}
+.modal-times{
+    padding:0.5em;
+    font-size:x-large;
+    background:#000;
+    color:#eee;
+    border-radius:20px;
+    width:auto;
+    margin-left:auto;
+}
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.397);
+    transition:0.4s;
+    opacity:0;
+    display:none;
+}
+
+.push-notif{
+    bottom:1em;
+    right:1em;
+    position:fixed;
+    height:80px;
+    width:300px;
+    border-right:3px solid var(--misc);
+    border-radius:20px 0px 20px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    padding:2em;
+    overflow:hidden;
+    background:#fff;
+    transition:0.4s;
+    opacity:0;
+    display:none;
+}
+.push-notif h4{
+    font-weight:bold;
+    font-variant-caps: all-small-caps;
+    border-bottom:2px solid var(--misc);
+    width:auto;
+    margin-right:auto;
+    padding-bottom:5px;
+}
+.xeep-socials{
+    display:flex;
+    align-items: center;
+    font-family:"thin-font";
+    margin:1em 0;
+}
+.xeep-socials>.item{
+    padding:1em;
+    min-width:50px;
+    background:#2b2c3d;
+    color:#fff;
+    border:1px solid rgba(146, 146, 146, 0.404);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:40px;
+    transition:0.4s;
+    margin-left:5px;
+}
+
+.xeep-socials p{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    width:0;
+    overflow:hidden;
+    transition:0.4s;
+}
+.xeep-socials>.item:hover{
+    background:var(--misc);
+}
+[class$="-button"]{
+    padding:0.5em;
+    color:#fff;
+    border:2px solid var(--misc);
+    border-radius:10px;
+    background:var(--misc);
+    font-family:thin-font;
+    margin:5px;
+    transition:0.4s;
+    outline:none;
+}
+.secondary-button, .primary-button:hover{
+    background:transparent !important;
+}
+.secondary-button:hover{
+    background:var(--misc) !important;
+}
+.right{
+    text-align:right;
+    width:100%;
+    padding:0 0.7em;
+    font-size:large;
+}
