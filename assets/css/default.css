@@ -178,38 +178,7 @@ P{
     margin-right:auto;
     padding-bottom:5px;
 }
-.xeep-socials{
-    display:flex;
-    align-items: center;
-    font-family:"thin-font";
-    margin:1em 0;
-}
-.xeep-socials>.item{
-    padding:1em;
-    min-width:50px;
-    background:#2b2c3d;
-    color:#fff;
-    border:1px solid rgba(146, 146, 146, 0.404);
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border-radius:40px;
-    transition:0.4s;
-    margin-left:5px;
-}
 
-.xeep-socials p{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin:auto;
-    width:0;
-    overflow:hidden;
-    transition:0.4s;
-}
-.xeep-socials>.item:hover{
-    background:var(--misc);
-}
 [class$="-button"]{
     padding:0.5em;
     color:#fff;
