@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"/> -->
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="./assets/img/favicon.png" rel="icon" sizes="32x32" type="image/png">
@@ -18,18 +18,21 @@
         <p>Dragon lang</p>
     </div>
     <div class="dgn-navigator" id="resp">
-        <div class="right"><button class="secondary-button" onclick="navigator.close()"><span class="fa fa-times"></span></button> </div>
-        <hr>
+        <div class="right"><div class="secondary-button" onclick="navigator.close()"><span class="fa fa-times"></span></div> </div>
+  
         <a href="./index.html" class="item">Home</a>
-        <hr>
-        <a href="" class="item">Forum</a>
-        <hr>
-        <button class="primary-button">Z-Dragon IDE</button>
-        <hr>
+    
+        <a href="" class="item">Docs</a>
+      
         <a href="" class="item">Community</a>
-        <hr>
-        <button class="secondary-button">Dragon v20.0.1</button>
-        <hr>
+      
+        <a href="" class="item">Blog</a>
+    <div class="cta-header">
+        
+        <a href="" class="btn btn-pr">Z-Dragon IDE</a href="">
+            <a href="" class="btn btn-o">Dragon v20.0.1</a href="">
+           
+    </div>
     </div>
     <div class="dgn-navigator-toggler">
         <button class="secondary-button" onclick="navigator.open()"><span class="fa fa-bars"></span></button> 
@@ -43,23 +46,29 @@
 </header>
 <div class="col-md-12 dgn-content">
     <div class="dgn-hero">
-        <div class="hero-img">
+    
             <img src="assets/img/logo.png" alt="" data-aos="flip-left" data-aos-easing="linear">
-        </div>
+        
+            
         <div class="hero-meta" data-aos="zoom-out-left">
-            <h2>Dragon programming languge</h2>
-            <p>-Write less do more</p>
+            <h1 class="heading"> <span>Dragon </span> programming languge</h1>
+            <p class="tagline">-Write less do more</p>
             <div class="hero-buttons">
                 <a href="./download.html"><button class="primary-button">Download</button></a>
                 <a href="./documentation.html"><button class="secondary-button">Documentation</button></a>
             </div>
+                    <span class="dgn-socials flex">
+                        <a href="" class="item"><span class="fa fa-facebook"></span></a>
+                        <a href="" class="item"><span class="fa fa-twitter"></span></a>
+                        <a href="" class="item"><span class="fa fa-instagram"></span></a>
+                        <a href="" class="item"><span class="fa fa-pinterest"></span></a>
+                    </span>
         </div>
+        
     </div>
-    <div class="dgn-socials hidden">
-        <div class="item"><span class="fa fa-facebook"></span></div>
-        <div class="item"><span class="fa fa-twitter"></span></div>
-        <div class="item"><span class="fa fa-instagram"></span></div>
-        <div class="item"><span class="fa fa-pinterest"></span></div>
+ 
+    <div id="wave">
+        <img src="./assets/img/wave.svg" alt="Wave">
     </div>
     <div class="dgn-body">
         <div class="hdr" data-aos="flip-left">
@@ -99,6 +108,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="nav-toggler" onclick="nav.open()">
     <span class="fa fa-arrow-right" ></span>
 </div>
@@ -163,6 +174,7 @@
             <p>&copy; 2020 Dragon-Programming-language</p>
         </div>
     </footer>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/functions.js"></script>
